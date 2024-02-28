@@ -1,0 +1,28 @@
+<section class="parallax" [style.background-image]="'linear-gradient(rgba(0,0,0,.527),rgba(0,0,0,.5)), url(' + bannerImage + ')'">
+    <div class="container">
+        <div class="row vh-100 d-flex justify-content-center align-items-center text-center">
+            <div class="col-lg-11 content-center">
+
+                <div *ngIf="isHeadStylish == true">
+                    <h1> 
+                        <strong>{{headFirst}}</strong>  
+                        
+                        <strong> {{headMid}} </strong>
+                        
+                        <strong>{{headLast}}</strong>
+                    
+                    </h1>
+                </div>
+
+                <div *ngIf="isHeadStylish == false">
+                    <h1> 
+                        <strong>{{headFull}}</strong> 
+                    
+                    </h1>
+                </div>
+                
+               <h4>{{subhead}}</h4>
+            </div>
+        </div>
+    </div>
+</section>

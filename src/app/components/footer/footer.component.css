@@ -1,0 +1,71 @@
+
+.company-details ul li {
+    list-style-type: none;
+}
+
+.footer-email ul {
+    margin: 0;
+    padding: 0;
+}
+
+.list-unstyled li,
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    transition: all 265ms ease-out;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons a:before {
+    transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    content: " ";
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #121212, #121212);
+    transition: all 265ms ease-out;
+}
+
+.social-icons a:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #00b5f5;
+    background: -webkit-linear-gradient(45deg, #00b5f5, #002a8f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
+}
+
+@media screen and (max-width: 480px) {
+    .icons ul {
+        padding-left: 0rem;
+    }
+}

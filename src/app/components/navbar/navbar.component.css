@@ -1,0 +1,20 @@
+.navbar{
+    
+}
+
+.navbar-toggler {
+    font-size: 16px;
+    
+}
+
+.navbar-nav .nav-item .nav-link, .dropdown-item {
+  
+    position: relative;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+}
+
+a{
+    color: #000;
+}
+
