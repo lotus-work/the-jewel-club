@@ -2,3 +2,10 @@
     padding: 90px 0;
 }
 
+
+.eapps-instagram-feed a{
+    display: none !important;
+}
+#eapps-instagram-feed-1 a{
+    display: none !important;
+}
