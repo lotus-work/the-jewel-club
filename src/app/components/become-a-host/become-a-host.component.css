@@ -9,6 +9,11 @@
     text-transform: uppercase;
 }
 
+/* .process
+{
+    background: url(https://landing.shopilaunch.com/bwstore/images/bg-landing-footer.jpg);
+} */
+
 
 .process {
     padding: 90px 0;
@@ -30,4 +35,8 @@
     background-color: rgba(55, 56, 56, 0.123);
     z-index: -1;
     transition: all 0.4s ease 0s;
+}
+
+.process ul li{
+ list-style-type: none;
 }
