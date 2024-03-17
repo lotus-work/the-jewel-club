@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+declare var Instafeed: any;
 
 @Component({
   selector: 'app-gallery',
@@ -10,16 +11,18 @@ export class GalleryComponent {
 
   constructor() { }
 
-  ngOnInit(): void {
-    if (this.iframe) {
-      const iframeElement = this.iframe.nativeElement;
-      const iframeDocument = iframeElement.contentWindow.document;
+  images: any[] = [];
 
-      // Hide elements inside the iframe
-      const elementsToHide = iframeDocument.querySelectorAll('.eapps-instagram-feed a, #eapps-instagram-feed-1 a');
-      elementsToHide.forEach((element: HTMLElement) => {
-        element.style.display = 'none';
-      });
-    }
+  ngOnInit() {
+    const userFeed = new Instafeed({
+      get: 'user',
+      target: 'instafeed-container',
+      resolution: 'low_resolution',
+      accessToken: 'IGQWROUXpqUENkM3Q4WUlNdE45MVVpcmhtelc1clN5NU1Ddmxyc2pmWVpHUzN0cnRKQmI1ajgyOEl1NXBkMldwMUl6dUY2OEM0dllHd0dCY3ViZAnlMeGxWMmFZAY09RV3JCcTBibDZAMd1RpT0ZAFRzZAJd3RwaElUUTAZD'
+    });
+
+    userFeed.run((data: any) => {
+      this.images = data.data;
+    });
   }
 }

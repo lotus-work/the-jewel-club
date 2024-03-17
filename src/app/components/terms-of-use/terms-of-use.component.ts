@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class TermsOfUseComponent {
 
+  isHeadStylish = true; 
+  bannerImage = "../../../assets/img/faq_legal/terms-use.jpg"; 
+ 
+  headFirst = 'The Jewel Club';
+  
+  subhead = 'Terms of Use';
 }

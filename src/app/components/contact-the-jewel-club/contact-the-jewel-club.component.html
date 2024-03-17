@@ -15,29 +15,32 @@
             <div class="col-lg-6 col-md-6 col-12  right-half">
                 <div>
                     <h3>Get in Touch</h3>
-                    <form class="mt-4">
 
+                    <form class="mt-4" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="firstName" formControlName="firstName">
                         </div>
-
+                    
                         <div class="form-group my-4">
                             <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="lastName" formControlName="lastName">
                         </div>
+                    
                         <div class="form-group">
                             <label for="emailAddress">Email address</label>
-                            <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="emailAddress" formControlName="emailAddress">
                         </div>
+                    
                         <div class="form-group my-4">
                             <label for="phoneNumber">Phone Number</label>
-                            <input type="text" class="form-control" id="phoneNumber" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
                         </div>
+                    
                         <label for="country">Country</label><span
                             style="color: red !important; display: inline; float: none;">*</span>
-
-                        <select id="country" name="country" class="form-control">
+                    
+                        <select id="country" name="country" class="form-control" formControlName="country">
                             <option value="">Please choose our country</option>
                             <option value="Afghanistan">Afghanistan</option>
                             <option value="Åland Islands">Åland Islands</option>
@@ -289,37 +292,26 @@
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
                         </select>
+                    
                         <div class="form-group my-4">
-                            <label for="exampleInputInterested">I’m interested in</label>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Becoming a Stylist
+                            <label for="">Renovation(s) Required</label>
+                
+                            <div class="">
+              
+                            
+            
+                              <div class="form-check"  *ngFor="let asset of assets">
+                                <input class="form-check-input" type="checkbox" value="{{ asset }}"  id="{{asset}}"  (change)="onChange(asset)">
+                                <label class="form-check-label" for="{{asset}}">
+                                  {{asset}}
                                 </label>
+                              </div>
+            
                             </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Hosting a Styling Session
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Connecting with a stylist
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                <label class="form-check-label" for="defaultCheck1">
-                                    Connecting with my current stylist
-                                </label>
-                            </div>
-
                         </div>
-
-                        <button type="submit" class="btn btn-lg btn-warning my-5">Submit</button>
+                        <button type="submit" [disabled]="!contactForm.valid" class="btn btn-lg btn-secondary my-5">Submit</button>
                     </form>
+                   
                 </div>
             </div>
 

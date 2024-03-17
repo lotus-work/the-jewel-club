@@ -1,7 +1,23 @@
 <app-navbar></app-navbar>
 
-<app-banner-legal [isHeadStylish]='true' bannerImage="../../../assets/img/privacy-policy.jpg" headFirst="The Jewel Club"
-   subhead="Terns of Use"></app-banner-legal>
+   <section class="parallax"
+    [style.background-image]="'linear-gradient(rgba(0,0,0,.527),rgba(0,0,0,.5)), url(' + bannerImage + ')'">
+    <div class="container">
+        <div class="rowd-flex justify-content-start align-items-start text-left">
+            <div class="col-lg-11 content-left">
+
+                <div *ngIf="isHeadStylish == true">
+                    <h1>
+                        <strong>TERMS OF USE</strong>
+
+
+                    </h1>
+                </div>
+                <!-- <h4>{{subhead}}</h4>/ -->
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="terms-of-use">
     <div class="container">

@@ -21,6 +21,12 @@ import { FaqsComponent } from './components/faqs/faqs.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { FaqPageComponent } from './components/faq-page/faq-page.component';
 import { BannerLegalComponent } from './components/banner-legal/banner-legal.component';
+import { LightgalleryModule } from 'lightgallery/angular';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgToastModule } from 'ng-angular-popup';
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
 @NgModule({
   declarations: [
@@ -45,9 +51,15 @@ import { BannerLegalComponent } from './components/banner-legal/banner-legal.com
     BannerLegalComponent
   ],
   imports: [
+    NgToastModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule ,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [
     provideClientHydration()
   ],

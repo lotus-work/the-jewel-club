@@ -1,3 +1,10 @@
 .about-us{
-    padding: 90px 0;
+   background-color: burlywood !important;
+    padding: 120px 0;
+}
+.unique-1{
+background-color: #e5ebeb;
+}
+.unique-1 .right{
+    padding: 0 !important;
 }
