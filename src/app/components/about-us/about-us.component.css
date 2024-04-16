@@ -1,10 +1,12 @@
 .about-us{
-   background-color: burlywood !important;
+    position: relative;
     padding: 120px 0;
+    background-color: #175C43 ;
 }
-.unique-1{
-background-color: #e5ebeb;
+.about-us .first-gap{
+    padding-bottom: 34px;
 }
-.unique-1 .right{
-    padding: 0 !important;
+.about-us p{
+    font-size: 18px;
+    color: #F2F2F2;
 }

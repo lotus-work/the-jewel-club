@@ -1,20 +1,39 @@
-.navbar{
-    
-}
+.navbar {}
 
 .navbar-toggler {
     font-size: 16px;
-    
+
 }
 
-.navbar-nav .nav-item .nav-link, .dropdown-item {
-  
+.logo ul {
+    padding: 0 0 0 15px;
+    margin: 0;
+    list-style-type: none;
+}
+
+.logo ul li:first-child {
+    font-family: the_goblick;
+    color: #000000;
+    font-weight: 700;
+    font-size: 28px !important;
+}
+
+.logo ul li:nth-child(2) {
+    font-family: century_gothic;
+    color: #000000;
+    font-size: 12px !important;
+    letter-spacing: 2px;
+}
+
+
+.navbar-nav .nav-item .nav-link,
+.dropdown-item {
+
     position: relative;
     text-transform: capitalize;
     transition: all .3s ease-in-out;
 }
 
-a{
+a {
     color: #000;
 }
-

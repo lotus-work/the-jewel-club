@@ -32,11 +32,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
-              "src/_redirects"
+              "src/assets"
             ],
             "styles": [
-              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -51,13 +49,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "225mb",
-                  "maximumError": "225mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "225mb",
-                  "maximumError": "225mb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "outputHashing": "all"
@@ -110,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "32629b82-f0e9-4064-ad3d-85c16af06e5d"
+    "analytics": "07d5b110-1e58-4ed2-83ce-04d82e4803c1"
   }
 }

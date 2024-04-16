@@ -1,43 +1,56 @@
+ .legal p, li, a{
+    font-size: 14px !important;
+    color: #000000 !important;
+}
+.nav-link:hover{
+    color: rgb(16, 103, 170) !important;
+}
 
-.footer{
-    background-color: black;
-}
-.footer a{
-    color: white;
-    text-decoration: none;
-}
-.footer a:hover{
-  text-decoration: underline;
-}
-.company-details ul li {
+
+.logo ul {
+    padding: 0 0 0 15px;
+    margin: 0;
     list-style-type: none;
 }
 
-.footer-email ul {
-    margin: 0;
-    padding: 0;
+.logo ul li:first-child {
+    font-family: the_goblick;
+    color: #000000;
+    font-weight: 700;
+    font-size: 28px !important;
 }
 
-.list-unstyled li,
-a {
-    margin: 0;
-    padding: 0;
+.logo ul li:nth-child(2) {
+    font-family: century_gothic;
+    color: #000000;
+    font-size: 12px !important;
+    letter-spacing: 2px;
 }
 
+.quick-links h5 {
+    font-size: 18px ;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.social-icons {
+    padding-left: 0px !important;
+}
 
 .social-icons li {
     display: inline-block;
-    margin: 0.15em;
+   margin-left:10px ;
     position: relative;
     font-size: 1.2em;
 }
 
 .social-icons i {
-    color: #fff;
+    color: #000000;
     position: absolute;
-    top: 15px;
-    left: 17px;
+    top: 11px;
+    left: 12px;
     transition: all 265ms ease-out;
+    font-size: 18px;
 }
 
 .social-icons a {
@@ -49,28 +62,21 @@ a {
     -ms-transform: scale(1);
     -webkit-transform: scale(1);
     content: " ";
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     display: block;
-    background: linear-gradient(45deg, #121212, #121212);
+    background: linear-gradient(45deg, #ffffff, #ffffff);
     transition: all 265ms ease-out;
+    border: 1px solid black;
 }
 
 .social-icons a:hover:before {
-    transform: scale(0);
-    transition: all 265ms ease-in;
+    background: linear-gradient(45deg, #181818, #0b0b0b);
 }
 
 .social-icons a:hover i {
-    transform: scale(2.2);
-    -ms-transform: scale(2.2);
-    -webkit-transform: scale(2.2);
-    color: #00b5f5;
-    background: -webkit-linear-gradient(45deg, #00b5f5, #002a8f);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 265ms ease-in;
+color: #ffffff;
 }
 
 @media screen and (max-width: 480px) {

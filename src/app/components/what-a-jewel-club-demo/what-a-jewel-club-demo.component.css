@@ -1,0 +1,53 @@
+.whats-a-jewel-club-demo {
+    padding: 120px 0;
+    background-color: #175C43;
+}
+
+.whats-a-jewel-club-demo .first-gap {
+    padding-bottom: 34px;
+}
+
+
+
+.whats-a-jewel-club-demo p {
+    font-size: 18px;
+    color: #F2F2F2;
+}
+
+.side-by-side .first-section{
+    background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.137) 6.05%, rgba(0, 0, 0, 0.203) 17.78%, rgba(255, 255, 255, 0.126) 50%), url(../../../assets/img/others/first-section.jpeg);
+   
+    /* background-image: url('../../../assets/img/others/first-section.jpeg'); */
+     background-size: cover;
+    background-position: center;
+    height: 650px;
+    position: relative;
+}
+
+
+.side-by-side .second-section{ 
+     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.137) 6.05%, rgba(0, 0, 0, 0.203) 17.78%,  rgba(255, 255, 255, 0.126) 50%), url(../../../assets/img/others/second-section.jpeg);
+  
+    /* background-image: url('../../../assets/img/others/second-section.jpeg'); */
+    background-size: cover;
+   background-position: center;
+   height: 650px;
+}
+
+
+.details-ambassador {
+    padding: 120px 0;
+    background-color: #175C43;
+    color: #F2F2F2;
+    font-size: 18px;
+}
+
+
+.details-ambassador .bullet_points {
+    padding: 25px 0;
+}
+
+.details-ambassador .bullet_points p {
+    font-weight: 600;
+    padding-bottom: 0;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -6,14 +6,5 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
-  
-  @Input() isHeadStylish = false; 
-  @Input() bannerImage = ""; 
- 
-  @Input() headFirst = ''; 
-  @Input() headMid = ''; 
-  @Input() headLast = ''; 
-  @Input() headFull = ''; 
-  
-  @Input() subhead = '';
+
 }

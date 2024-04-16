@@ -1,65 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@import url(https://db.onlinewebfonts.com/c/9027abcf80a0095c71d4ebc4aa4de4b1?family=Century+Gothic+W05+Regular);
+@import url(https://db.onlinewebfonts.com/c/56e7c87858bde1d82ccd371fbbcd6983?family=The+Goblick+Demo);
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/bebas');
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+    font-family: the_goblick;
+    src: url(./assets/font/the_goblick/the_goblick.ttf);
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300..700;1,300..700&display=swap');
-
+@font-face {
+    font-family: century_gothic;
+    src: url(./assets/font/century-gothic/CenturyGothic.ttf);
+}
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
+    font-family: century_gothic;
     
-    /* font-family: "Bebas Neue", sans-serif; */
-    font-family: "Playfair Display", serif;
-        letter-spacing: 0.6px;
-        /* font-family: "Rasa", serif; */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
+#century_gothic_light {
+    font-family: century_gothic;
+    color: #FFFFFF;
     font-weight: 700;
-    /* font-family: "Quicksand", sans-serif; */
- 
-    font-family: "Playfair Display", serif;
+    font-style: italic;
+    text-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.36);
 
-
-    text-shadow: 2px 1px 4px #5a595920;
-}
-h3,h5{
-    text-transform: uppercase;
 }
 
-h1{
-   
-    font-size: 50px;
-    text-shadow: 2px 1px 4px #00000020;
+#the_goblick_light {
+    font-family: the_goblick;
+    color: #FFFFFF;
+    font-weight: 400;
 }
 
 
-@media screen and (max-width: 480px) {
-    h1{
-       font-size: 30px;
-    }
-   }
-label{
-    padding-bottom: 8px;
+#century_gothic_dark {
+    font-family: century_gothic;
+    color: #000000;
+    font-weight: 700;
+    font-style: italic;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+
 }
-.para {
-    padding: 0 0 20px 0;
+
+#the_goblick_dark {
+    font-family: the_goblick;
+    color: #000000;
+    font-weight: 400;
+}
+
+.first-gap h2 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    border: none;
+    color: #000000;
+    line-height: 24px;
+    font-size: 16px !important;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: 14px 30px;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffffd9 !important;
+    color: #000000;
+}
+
+.btn-dark {
+    background-color: #000000;
+    border: none;
+    color: #FFFFFF;
+    line-height: 24px;
+    font-size: 16px !important;
+    text-transform: capitalize;
+
+    padding: 14px 30px;
+}
+
+p {
+    font-size: 18px !important;
 }

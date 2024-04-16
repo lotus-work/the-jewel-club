@@ -1,0 +1,21 @@
+.join-the-jewel-club {
+    padding: 120px 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 48.1%), url(../../../assets/img/others/awesome_bg_join_theclub.svg);
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: calc(40% ); /* Position the background image slightly away from the bottom-right corner */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+ 
+}
+
+.join-the-jewel-club .first-gap {
+    padding-bottom: 34px;
+}
+
+
+
+.join-the-jewel-club p {
+    font-size: 18px;
+    color: #000000;
+}
+
+
