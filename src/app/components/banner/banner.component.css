@@ -21,6 +21,14 @@
     z-index: -1;
 }
 
+@media only screen and (max-width: 600px) {
+    .background-image {
+        /* background-image: url('../../../assets/img/others/banner1.png'); */
+     background-image: url('../../../assets/img/others/banner2.jpeg');
+        background-position:  bottom;
+    }
+  }
+
 .background-image::after {
     content: "";
     position: absolute;

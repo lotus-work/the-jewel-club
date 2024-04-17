@@ -1,0 +1,20 @@
+.parallax {
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a minimum height */
+    background-image: url('../../../assets/img/others/terms-use.jpg');
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax p{
+    color: #ffffff;
+}
+
+.terms-of-use{
+    padding: 70px 0;
+}

@@ -1,7 +1,6 @@
 .connect-with-ambassador {
     position: relative;
-    height: 100vh;
-    /* Set the height of the section */
+    height: 100vh
 }
 
 .video-container {
@@ -10,162 +9,142 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* Adjusted to cover the entire section */
     overflow: hidden;
-    z-index: -1;
+    z-index: -1
 }
 
 #bg-video {
     position: absolute;
     top: 50%;
-    /* Adjusted to center vertically */
     left: 50%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    transform: translate(-50%, -50%);
-    /* Center the video horizontally and vertically */
+    transform: translate(-50%,-50%)
 }
 
-.video-container::after {
+.video-container:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(105, 103, 103, 0.4).09%, rgba(0, 0, 0, 0.248) 35.57%, rgba(255, 255, 255, 0.4) 100%);
-    z-index: 0;
+    background: linear-gradient(180deg,#69676766.09%,#0000003f 35.57%,#fff6);
+    z-index: 0
 }
 
 #bg-video {
     position: absolute;
     top: 50%;
-    /* Adjusted to center vertically */
     left: 50%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    transform: translate(-50%, -50%);
-    /* Center the video horizontally and vertically */
-    z-index: -1;
+    transform: translate(-50%,-50%);
+    z-index: -1
 }
-
 
 .container {
     position: absolute;
     top: 50%;
-    /* Position the container at the vertical center */
     left: 50%;
-    /* Position the container at the horizontal center */
-    transform: translate(-50%, -50%);
-    /* Center the container both horizontally and vertically */
+    transform: translate(-50%,-50%);
     width: 100%;
-    text-align: center;
-    /* Center the content horizontally */
+    text-align: center
 }
 
 .container .row {
-    height: 100%;
+    height: 100%
 }
 
-.container .col-lg-8,
-.container .col-md-10,
-.container .col-12 {
+.container .col-lg-8, .container .col-md-10, .container .col-12 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center
 }
 
-.container h2,
-.container .btn {
-    margin-top: 0;
-    /* Remove top margin to center vertically */
-
+.container h2, .container .btn {
+    margin-top: 0
 }
-
 
 .host-the-jewel-club-demo {
     position: relative;
-    height: 100vh;
-    /* Cover the entire viewport height */
+    height: 100vh
 }
 
 .host-the-jewel-club-demo p {
     font-size: 18px;
-    color: #F2F2F2;
+    color: #f2f2f2
 }
 
 .host-the-jewel-club-demo .background-image {
-   
-   
-    position: relative; /* Ensure proper layering */
+    /* position: relative; */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.674) 6.05%, rgba(0, 0, 0, 0.559) 17.78%, rgba(255, 255, 255, 0.126) 50%), url(../../../assets/img/others/host-the-jewel-club-demo.jpeg);
+    background-image: linear-gradient(180deg,#000000ac 6.05%,#0000008f 17.78%,#ffffff20 50%),url("../../../assets/img/others/host-the-jewel-club-demo.jpeg");
     background-size: cover;
     background-position: top bottom;
-    z-index: -1;
+    z-index: -1
 }
 
-.host-the-jewel-club-demo .background-image::after {
+
+
+.host-the-jewel-club-demo .background-image:after {
     content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgba(105, 103, 103, 0.4).09%, rgba(0, 0, 0, 0.248) 35.57%, rgba(255, 255, 255, 0.4) 100%);
-    z-index: 0;
+    background: linear-gradient(180deg,#69676766.09%,#0000003f 35.57%,#fff6);
+    z-index: 0
 }
 
+@media only screen and (max-width: 600px) {
+    .host-the-jewel-club-demo .background-image {
+        background-position:  bottom;
+    }
+  }
 .host-the-jewel-club-demo .container {
-   
     z-index: 1;
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .host-the-jewel-club-demo .container .row {
-    width: 100%;
+    width: 100%
 }
 
-.host-the-jewel-club-demo .container .first-gap,
-.container .second-gap {
-    margin-bottom: 20px;
+.host-the-jewel-club-demo .container .first-gap, .container .second-gap {
+    margin-bottom: 20px
 }
 
 .host-the-jewel-club-demo .container h2 {
-    margin-top: 0;
+    margin-top: 0
 }
 
 .host-the-jewel-club-demo .second-gap {
-    padding-top: 30px;
+    padding-top: 30px
 }
 
-
-/* Additional styles for OR text */
 .or-text-container {
     position: absolute;
     left: 50%;
-    /* Position at the horizontal center */
-    transform: translate(-50%, -50%);
-    /* Center the container both horizontally and vertically */
-    background-color: #FFFFFF;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
     padding: 20px;
     border-radius: 50%;
-    z-index: 2;
+    z-index: 2
 }
 
 .or-text {
     font-size: 32px;
-    /* Adjust font size as needed */
-    color: #000000;
-    font-weight: 600;
-    /* Change color as needed */
+    color: #000;
+    font-weight: 600
 }

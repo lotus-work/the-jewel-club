@@ -1,20 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
+import { NgToastService } from 'ng-angular-popup';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ApiServiceService } from '../../services/api-service/api-service.service';
-import { NgToastService } from 'ng-angular-popup';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
+  selector: 'app-contact-the-jewel-club',
+  templateUrl: './contact-the-jewel-club.component.html',
+  styleUrl: './contact-the-jewel-club.component.css'
 })
-export class ContactComponent  implements OnInit {
+export class ContactTheJewelClubComponent  implements OnInit {
   contactForm!: FormGroup; // Declare the property with an exclamation mark to tell TypeScript that it will be initialized
   assets: any = ['Connecting with an Ambassador', 'Contacting The Jewel Club', 'Becoming a Host', 'Following up my Order', 'Becoming an Ambassador'];
   all_selected_values: any = [];
-  constructor(private formBuilder: FormBuilder, private spinner: NgxSpinnerService, private _apiCallServices: ApiServiceService, private toast: NgToastService,private titleService: Title, private metaService: Meta) {
+  // constructor(private formBuilder: FormBuilder, private spinner: NgxSpinnerService, private _apiCallServices: ApiServiceService, private toast: NgToastService,private titleService: Title, private metaService: Meta) {
+ 
+  constructor(private formBuilder: FormBuilder) {
     // Initialize contactForm in the constructor
     this.contactForm = this.formBuilder.group({
       firstName: ['', Validators.required],

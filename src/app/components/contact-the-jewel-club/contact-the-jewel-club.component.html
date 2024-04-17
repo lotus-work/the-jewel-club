@@ -23,7 +23,7 @@
             <div class="col-lg-6 col-md-6 col-12  right-half">
                 <div>
                  
-                    <form class="mt-4" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <form  [formGroup]="contactForm" (ngSubmit)="onSubmit()">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
                             <input type="text" class="form-control" id="firstName" formControlName="firstName">
@@ -316,7 +316,7 @@
             
                             </div>
                         </div>
-                        <button type="submit" [disabled]="!contactForm.valid" class="btn btn-lg btn-secondary my-5">Submit</button>
+                        <button type="submit" [disabled]="!contactForm.valid" class="btn btn-lg btn-dark my-5">Submit</button>
                     </form>
                    
                 </div>

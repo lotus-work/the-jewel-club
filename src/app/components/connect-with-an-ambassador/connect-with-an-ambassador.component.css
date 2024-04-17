@@ -1,0 +1,19 @@
+.connect-with-an-ambassador{
+    padding: 70px 0;
+}
+.parallax {
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a minimum height */
+    background-image: url('../../../assets/img/others/connect-with-an-ambassador2.jpg');
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parallax p{
+    color: #ffffff;
+}
