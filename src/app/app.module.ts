@@ -15,6 +15,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
 import { WhatAJewelClubDemoComponent } from './components/what-a-jewel-club-demo/what-a-jewel-club-demo.component';
 import { JoinTheJewelClubComponent } from './components/join-the-jewel-club/join-the-jewel-club.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CookiePolicyComponent } from './components/cookie-policy/cookie-policy.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
