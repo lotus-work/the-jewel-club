@@ -10,6 +10,8 @@ export class ApiServiceService {
 
    rootURL3 = "https://api.michaelthehomebuyer.ca/"
   //rootURL3 = "http://localhost:3000/"
+  rootURL = "https://api.apispreadsheets.com/data/Cl3EWsuFSNE5ddB6/";
+
   constructor(private http: HttpClient) { }
 
   contactLeadApi( email: string,  subject: string, message: string): Observable<any> {
@@ -18,6 +20,9 @@ export class ApiServiceService {
       subject: subject,
       message: message
     }).pipe(catchError(this.errorHandler));
+  }
+  fetchFAQData(): Observable<any> {
+    return this.http.get<any>(this.rootURL);
   }
   errorHandler(error: HttpErrorResponse){
     console.error(error);
