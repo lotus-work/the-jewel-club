@@ -1,0 +1,52 @@
+.faqs {
+    padding: 70px 0;
+}
+
+.faqs .accordion-item .accordion-header button {
+    font-weight: 700;
+    font-style: italic !important;
+    line-height: 32px;
+    color: #1C1C1C;
+    font-size: 18px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: none;
+}
+
+.accordion-body ul li {
+    font-size: 18px;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url(../../../assets/img/icon/cross.svg);
+    transform: rotate(-180deg);
+
+}
+
+.accordion-button::after {
+    background-image: url(../../../assets/img/icon/plus.svg);
+
+
+}
+
+.parallax {
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Set a minimum height */
+    /* background-image: url('../../../assets/img/others/faqs.jpg'); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.341)), url(../../../assets/img/others/faqs.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.parallax p{
+    color: #ffffff;
+}

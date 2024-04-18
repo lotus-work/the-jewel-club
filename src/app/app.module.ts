@@ -28,6 +28,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ConnectWithAnAmbassadorComponent } from './components/connect-with-an-ambassador/connect-with-an-ambassador.component';
 import { ContactTheJewelClubComponent } from './components/contact-the-jewel-club/contact-the-jewel-club.component';
 import { ConnectWithAmbassadorComponent } from './components/connect-with-ambassador/connect-with-ambassador.component';
+import { FaqPageComponent } from './components/faq-page/faq-page.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { ConnectWithAmbassadorComponent } from './components/connect-with-ambass
     GalleryComponent,
     ConnectWithAnAmbassadorComponent,
     ContactTheJewelClubComponent,
-    ConnectWithAmbassadorComponent
+    ConnectWithAmbassadorComponent,
+    FaqPageComponent
   ],
   imports: [
     NgToastModule,

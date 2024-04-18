@@ -8,9 +8,11 @@ import { TermsOfUseComponent } from './components/terms-of-use/terms-of-use.comp
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { ConnectWithAnAmbassadorComponent } from './components/connect-with-an-ambassador/connect-with-an-ambassador.component';
 import { ContactTheJewelClubComponent } from './components/contact-the-jewel-club/contact-the-jewel-club.component';
+import { FaqPageComponent } from './components/faq-page/faq-page.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'faqs', component: FaqPageComponent},
   {path: 'gallery', component: GalleryComponent},
   {path: 'connect-with-an-ambassador', component: ConnectWithAnAmbassadorComponent},
   {path: 'contact', component: ContactTheJewelClubComponent},
