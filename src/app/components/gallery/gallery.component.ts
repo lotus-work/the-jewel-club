@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+declare var Instafeed: any;
 
 @Component({
   selector: 'app-gallery',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './gallery.component.css'
 })
 export class GalleryComponent {
+  @ViewChild('iframe') iframe?: ElementRef;
 
+  constructor() { }
+
+  images: any[] = [];
+
+  ngOnInit() {
+    
+  }
 }

@@ -108,3 +108,44 @@ p {
     padding-bottom: 10px;
     text-transform: capitalize;
 }
+#instafeed-container{
+    box-shadow: none;
+}
+
+#instafeed-container img {
+    display: block;
+    max-width: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.084);
+}
+
+#instafeed-container img:hover {
+    box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.564);
+    transition: 0.5s;
+}
+
+/* 
+
+#instafeed-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 0.5rem;
+    max-width: 64rem;
+    margin: auto;
+  }
+  
+  #instafeed-container a {
+    display: block;
+  }
+  
+  #instafeed-container img {
+    display: block;
+    width: 100%;
+  }
+  
+   */

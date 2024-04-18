@@ -16,7 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
 </head>
 
 <body>
@@ -27,16 +27,29 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </script>
   <script src="https://cdn2.woxo.tech/a.js#65e8a9e9ba4342e64b968399" async data-usrc>
   </script>
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,fr'}, 'google_translate_element');
-}
+  <script src="./assets/js/instafeed.min.js"></script>
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+      get: 'user',
+      userId: 65101209849,
+      limit: 12,
+      target: "instafeed-container",
+      sortBy: 'most-recent',
+      resolution: 'standard_resolution',
+      accessToken: 'IGQWROUXpqUENkM3Q4WUlNdE45MVVpcmhtelc1clN5NU1Ddmxyc2pmWVpHUzN0cnRKQmI1ajgyOEl1NXBkMldwMUl6dUY2OEM0dllHd0dCY3ViZAnlMeGxWMmFZAY09RV3JCcTBibDZAMd1RpT0ZAFRzZAJd3RwaElUUTAZD',
+      template: '<div class="col-lg-4 col-md-4 col-12 gallery"> <a href="{{link}}" title="{{caption}}" target="_blank"> <img src="{{image}}" alt="{{caption}}"  srcset=""></a> </div>',
+    });
+    userFeed.run();
   </script>
-  
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
 </body>
 
 </html>

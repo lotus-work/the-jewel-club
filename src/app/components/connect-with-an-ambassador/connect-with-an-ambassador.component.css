@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     /* Set a minimum height */
-    background-image: url('../../../assets/img/others/connect-with-an-ambassador2.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.341)),  url('../../../assets/img/others/connect-with-an-ambassador2.jpg');
 
     display: flex;
     justify-content: center;
