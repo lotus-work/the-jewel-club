@@ -4,8 +4,12 @@
         <div class="row vh-100 d-flex justify-content-center align-items-center text-center">
             <div class="col-lg-12 content-center">
                 <div class="first-gap">
-                    <h2><span id="century_gothic_light">Connect With An Ambassador</span></h2>
-                   <p>Partner with a The Jewel Club Brand Ambassador for a time of style and storytelling. </p>
+                    <h2><span id="the_goblick_light">Partner with a <br/>The Jewel
+                        Club </span><span id="century_gothic_light">Brand Ambassador </span><br/>
+                    <span id="the_goblick_light"> for a time of style and storytelling.
+                    </span><br/><span id="century_gothic_light">She promises to make it fun</span>   <span id="the_goblick_light"> and engaging.
+                    </span>
+                </h2>
                 </div>
             </div>
         </div>
@@ -14,44 +18,48 @@
 <section class="connect-with-an-ambassador">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-lg-10 col-md-10 col-12">
-                <p>Please complete the information below to have a Consultant contact you to assist with placing an
-                    order, Hosting a Party and our Business Opportunity:
-                </p>
+            <div class="col-lg-6 col-md-6 col-12 left-half">
+                <h2><span id="century_gothic_dark">Find a Consultant</span></h2>
+                <p class="mt-4">Fill out the form provided to request assistance from a consultant who will help you with your order placement.</p>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-10">
-                <form>
+            <div class="col-lg-6 col-md-6 col-12  right-half">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
                     <div class="row">
-                        <div class="col-lg-4">
+                        <div class="col-lg-6 ">
                             <div class="form-group">
-                                <label for="firstName">First Name</label>
-                                <input type="text" class="form-control" id="firstName" aria-describedby="firstNameHelp">
+                                <label for="firstName">First Name<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <input type="text" class="form-control" id="firstName"formControlName="firstName"  aria-describedby="firstNameHelp">
                             </div>
                         </div>
-                        <div class="col-lg-4 my-lg-0 my-md-0 my-2">
+                        <div class="col-lg-6 my-md-0 my-3">
                             <div class="form-group">
-                                <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control" id="lastName" aria-describedby="lastNameHelp">
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-
+                                <label for="lastName">Last Name<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <input type="text" class="form-control" id="lastName" formControlName="lastName" aria-describedby="lastNameHelp">
                             </div>
                         </div>
                     </div>
-
+                
                     <div class="row mt-4">
-                        <div class="col-lg-4">
+                        <div class="col-lg-12">
                             <div class="form-group">
-                                <label for="phoneType1">Phone Type</label>
-                                <select class="form-control" id="phoneType1">
+                                <label for="email">Email address<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <input type="email" class="form-control" id="email"  formControlName="email"  aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-4">
+                        <div class="col-lg-6 ">
+                            <div class="form-group">
+                                <label for="phoneType1">Phone Type<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <select class="form-control" id="phoneType1" formControlName="phoneType1">
+              
+                                    <option value="">Please select type</option>
                                     <option>Home</option>
                                     <option>Work</option>
                                     <option>Mobile</option>
@@ -59,20 +67,22 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-4 my-lg-0 my-md-0 my-3">
+                        <div class="col-lg-6 my-md-0 my-3">
                             <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp">
+                                <label for="phone">Phone<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <input type="text" class="form-control" id="phone" formControlName="phone" aria-describedby="phoneHelp">
                             </div>
                         </div>
-
                     </div>
-
+                
                     <div class="row mt-4">
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
                             <div class="form-group">
-                                <label for="phoneType1">Phone Type</label>
-                                <select class="form-control" id="phoneType1">
+                                <label for="phoneType2">Phone Type</label>
+                                <select class="form-control" id="phoneType2" formControlName="phoneType2">
+            
+                                    <option value="">Please select type</option>
                                     <option>Home</option>
                                     <option>Work</option>
                                     <option>Mobile</option>
@@ -80,20 +90,35 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-4 my-lg-0 my-md-0 my-3">
+                        <div class="col-lg-6 my-md-0 my-3">
                             <div class="form-group">
-                                <label for="phone">Secondary Phone</label>
-                                <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp">
+                                <label for="secondaryPhone">Secondary Phone</label>
+                                <input type="text" class="form-control" id="secondaryPhone" formControlName="secondaryPhone" aria-describedby="phoneHelp">
                             </div>
                         </div>
-
                     </div>
-
+                
                     <div class="row mt-4">
-                        <div class="col-lg-4">
-                            <label for="country">Country</label>
-
-                            <select id="country" name="country" class="form-control">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="address">Address line 1<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <input type="text" class="form-control" id="address" formControlName="address1" aria-describedby="addressHelp">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 my-md-0 my-3">
+                            <div class="form-group">
+                                <label for="address2">Address line 2</label>
+                                <input type="text" class="form-control" id="address2" formControlName="address2" aria-describedby="addressHelp">
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <label for="country">Country<span
+                                style="color: red !important; display: inline; float: none;"> *</span></label>
+                            <select id="country" name="country" class="form-control" formControlName="country">
                                 <option value="">Please choose our country</option>
                                 <option value="Afghanistan">Afghanistan</option>
                                 <option value="Åland Islands">Åland Islands</option>
@@ -349,42 +374,25 @@
                                 <option value="Zimbabwe">Zimbabwe</option>
                             </select>
                         </div>
-                        <div class="col-lg-4  my-md-0 my-3">
+                        <div class="col-lg-6 my-md-0 my-3">
                             <div class="form-group">
-                                <label for="address">Address</label>
-                                <input type="text" class="form-control" id="address" aria-describedby="addressHelp">
+                                <label for="city">City<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <input type="text" class="form-control" id="city" formControlName="city" aria-describedby="cityHelp">
                             </div>
                         </div>
 
                     </div>
 
+                  
                     <div class="row mt-4">
-                        <div class="col-lg-4">
+                        <div class="col-lg-12">
                             <div class="form-group">
-                                <label for="state">State</label>
-                                <input type="text" class="form-control" id="state" aria-describedby="stateHelp">
-                            </div>
-                        </div>
-                        <div class="col-lg-4  my-md-0 my-3">
-                            <div class="form-group">
-                                <label for="city">City</label>
-                                <input type="text" class="form-control" id="city" aria-describedby="cityHelp">
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="zipCode">Zip Code</label>
-                                <input type="text" class="form-control" id="zipCode" aria-describedby="zipCodeHelp">
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row mt-4">
-                        <div class="col-lg-4">
-                            <div class="form-group">
-                                <label for="phoneType1">How did you hear about us?</label>
-                                <select class="form-control" id="phoneType1">
+                                <label for="howDidYouHear">How did you hear about us?<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <select class="form-control" id="howDidYouHear" formControlName="howDidYouHear">
+                            
+                                    <option value="">Select</option>
                                     <option>Corporate Website</option>
                                     <option>Direct Selling Association</option>
                                     <option>Event (Fair, Expo, etc)</option>
@@ -402,30 +410,35 @@
                     </div>
 
                     <div class="row mt-4">
-                        <label for="">I’m interested in</label>
-
+                        <label for="">I’m interested in<span
+                            style="color: red !important; display: inline; float: none;"> *</span></label>
+                
                         <div class="col-lg-12 col-md-12 col-12">
-
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                                <label class="form-check-label" for="inlineCheckbox1">Becoming a Consultant</label>
+                                <input class="form-check-input" type="checkbox" id="becomeConsultant" (change)="toggleInterest('becomeConsultant')" [checked]="interests['becomeConsultant']">
+                                <label class="form-check-label" for="becomeConsultant">Becoming a Consultant</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                <label class="form-check-label" for="inlineCheckbox2">Hosting a Party</label>
+                                <input class="form-check-input" type="checkbox" id="hostParty" (change)="toggleInterest('hostParty')" [checked]="interests['hostParty']">
+                                <label class="form-check-label" for="hostParty">Hosting a Party</label>
                             </div>
-
+                
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                                <label class="form-check-label" for="inlineCheckbox2">Other</label>
+                                <input class="form-check-input" type="checkbox" id="otherInterest" (change)="toggleInterest('otherInterest')" [checked]="interests['otherInterest']">
+                                <label class="form-check-label" for="otherInterest">Other</label>
                             </div>
                         </div>
                     </div>
+                    
+                    
+                    
+                    <button type="submit" class="btn btn-lg btn-dark mt-5 col-12"  [disabled]="!form.valid || !isInterestSelected()">Submit</button>
 
-                    <button type="submit" class="btn btn-lg btn-dark mt-5">Submit</button>
                 </form>
-            </div>
+                </div>
+
         </div>
+       
     </div>
 </section>
 

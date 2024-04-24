@@ -4,11 +4,11 @@
 .parallax {
 
     background-attachment: fixed;
-    background-position: center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     /* Set a minimum height */
-    background-image:linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.341)),  url('../../../assets/img/others/connect-with-an-ambassador2.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.111), rgba(0, 0, 0, 0.341)),  url('../../../assets/img/others/connect-with-an-ambassadorjpeg.jpeg');
 
     display: flex;
     justify-content: center;
@@ -16,4 +16,15 @@
 }
 .parallax p{
     color: #ffffff;
+}
+.left-half{
+    padding:40px;
+}
+.right-half{
+    border-left: 1px solid rgba(149, 147, 147, 0.386);
+    padding:40px;
+}
+
+.form-check-label{
+    font-weight: 400;
 }

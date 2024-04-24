@@ -30,6 +30,7 @@ import { ContactTheJewelClubComponent } from './components/contact-the-jewel-clu
 import { ConnectWithAmbassadorComponent } from './components/connect-with-ambassador/connect-with-ambassador.component';
 import { FaqPageComponent } from './components/faq-page/faq-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     ConnectWithAnAmbassadorComponent,
     ContactTheJewelClubComponent,
     ConnectWithAmbassadorComponent,
-    FaqPageComponent
+    FaqPageComponent,
+    ThankYouComponent
   ],
   imports: [
     NgToastModule,

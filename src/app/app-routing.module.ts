@@ -9,6 +9,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { ConnectWithAnAmbassadorComponent } from './components/connect-with-an-ambassador/connect-with-an-ambassador.component';
 import { ContactTheJewelClubComponent } from './components/contact-the-jewel-club/contact-the-jewel-club.component';
 import { FaqPageComponent } from './components/faq-page/faq-page.component';
+import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: 'contact', component: ContactTheJewelClubComponent},
   {path: 'cookie-policy', component: CookiePolicyComponent},
   {path: 'privacy-policy', component: PrivacyPolicyComponent},
-  {path: 'terms-of-use', component: TermsOfUseComponent}
+  {path: 'terms-of-use', component: TermsOfUseComponent},
+  {path: 'thank-you', component: ThankYouComponent}
 ];
 
 @NgModule({
