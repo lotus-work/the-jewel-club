@@ -60,6 +60,7 @@ formatInterest(key: string): string {
   }
 }
   onSubmit() {
+    this.spinner.show();
     console.log(this.form.value);
     console.log(this.interests);
     if (this.form.valid) {
