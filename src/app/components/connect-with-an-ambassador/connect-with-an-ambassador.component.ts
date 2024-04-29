@@ -50,7 +50,7 @@ toggleInterest(interest: string) {
 formatInterest(key: string): string {
   switch (key) {
       case 'becomeConsultant':
-          return 'Become Ambassador';
+          return 'Become An Ambassador';
       case 'hostParty':
           return 'Host Party';
       case 'otherInterest':
