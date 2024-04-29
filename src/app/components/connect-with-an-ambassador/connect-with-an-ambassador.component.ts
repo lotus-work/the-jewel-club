@@ -100,6 +100,8 @@ if (selectedInterests.length > 2) {
       <p><strong>Address Line 1:</strong> ${address1}</p>
   `;
   
+
+ 
   // Check if address2 is not empty and include it in the message body if not
   if (address2.trim() !== "") {
       messageBody += `<p><strong>Address Line 2:</strong> ${address2}</p>`;
@@ -117,15 +119,15 @@ if (selectedInterests.length > 2) {
   
   // Include the rest of the message body only if there is at least one of the specified fields filled
   if (address2.trim() !== "" || phoneType2.trim() !== "" || secondaryPhone.trim() !== "") {
-      messageBody += `
-          <p><strong>Country:</strong> ${country}</p>
-          <p><strong>City:</strong> ${city}</p>
-          <p><strong>How Did You Hear:</strong> ${howDidYouHear}</p>
-          <p><strong>Interests:</strong> ${interestString}</p>
-      `;
+   
   }
-  
 
+  messageBody += `
+  <p><strong>Country:</strong> ${country}</p>
+  <p><strong>City:</strong> ${city}</p>
+  <p><strong>How Did You Hear:</strong> ${howDidYouHear}</p>
+  <p><strong>Interests:</strong> ${interestString}</p>
+`;
       this._apiCallServices.contactLeadApi(hostEmail, subject, messageBody).subscribe(
         (res) => {
             console.log(res);
@@ -206,7 +208,7 @@ if (selectedInterests.length > 2) {
         () => console.log("Contact Form")
     );
     
-
+  console.log(messageBody);
       console.log('Form submitted successfully:', this.form.value);
     } else {
       // Form is invalid, display error messages
