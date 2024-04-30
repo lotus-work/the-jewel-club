@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
-import { HostTheJewelClubDemoComponent } from './components/host-the-jewel-club-demo/host-the-jewel-club-demo.component';
 import { FindAConsultantNearYouComponent } from './components/find-a-consultant-near-you/find-a-consultant-near-you.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -38,7 +37,6 @@ import { ThankYouComponent } from './components/thank-you/thank-you.component';
     NavbarComponent,
     AboutUsComponent,
     HowItWorksComponent,
-    HostTheJewelClubDemoComponent,
     FindAConsultantNearYouComponent,
     FaqsComponent,
     FooterComponent,
