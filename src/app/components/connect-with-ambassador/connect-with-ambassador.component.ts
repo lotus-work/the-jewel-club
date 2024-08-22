@@ -12,7 +12,7 @@ export class ConnectWithAmbassadorComponent  implements AfterViewInit {
   constructor() { }
 
   ngAfterViewInit(): void {
-    this.playVideoInSafari();
+    //this.playVideoInSafari();
   }
 
   playVideoInSafari(): void {

@@ -12,7 +12,7 @@ export class HowItWorksComponent {
   constructor() { }
 
   ngAfterViewInit(): void {
-    this.playVideoInSafari();
+    //this.playVideoInSafari();
   }
 
   playVideoInSafari(): void {
