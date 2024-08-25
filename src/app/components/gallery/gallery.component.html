@@ -22,32 +22,41 @@
 </section> -->
 
 <section class="gallery-section">
-    <div class="container">
-      <div class="row g-3">
-        <div class="col-lg-4 col-md-4 col-12 gallery" *ngFor="let item of galleryData">
-          <!-- Image in the gallery -->
+  <div class="container">
+    <div class="row g-3">
+      <ng-container *ngFor="let item of galleryData">
+        <!-- Main Image in the gallery -->
+        <div class="col-lg-4 col-md-4 col-12 gallery"  *ngIf="!item.children">
           <img [src]="item.media_url" [alt]="item.caption" (click)="openModal(item.media_url)" data-bs-toggle="modal" data-bs-target="#imageModal">
         </div>
-      </div>
+
+        <!-- Child Images in the gallery -->
+        <ng-container *ngIf="item.children && item.children.data.length">
+          <div class="col-lg-4 col-md-4 col-12 gallery" *ngFor="let child of item.children.data">
+            <img [src]="child.media_url" [alt]="item.caption" (click)="openModal(child.media_url)" data-bs-toggle="modal" data-bs-target="#imageModal">
+          </div>
+        </ng-container>
+      </ng-container>
     </div>
-  
-    <!-- Modal Structure -->
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5">Gallery</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <!-- Display the clicked image here -->
-            <img [src]="selectedImageUrl" width="100%" [alt]="'Selected Image'">
-          </div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Gallery</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- Display the clicked image here -->
+          <img [src]="selectedImageUrl" width="100%" [alt]="'Selected Image'">
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
   
 
 <app-footer></app-footer>
