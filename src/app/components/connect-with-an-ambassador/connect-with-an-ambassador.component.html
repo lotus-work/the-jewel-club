@@ -429,9 +429,16 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    
+                    <div class="mt-4">
+                        <div class="col-lg-12 my-md-0 my-3">
+                            <div class="form-group">
+                                <label for="message">Message<span
+                                    style="color: red !important; display: inline; float: none;"> *</span></label>
+                                <textarea class="form-control" id="message" formControlName="message" aria-describedby="messageHelp" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
                     <button type="submit" class="btn btn-lg btn-dark mt-5 col-12"  [disabled]="!form.valid || !isInterestSelected()">Submit</button>
 
                 </form>

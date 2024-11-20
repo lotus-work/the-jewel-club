@@ -36,6 +36,7 @@ export class ConnectWithAnAmbassadorComponent implements OnInit {
         address2: [''],
         country: ['', Validators.required],
         city: ['', Validators.required],
+        message: ['', Validators.required],
         howDidYouHear: ['', Validators.required],
        
     });
@@ -78,6 +79,7 @@ formatInterest(key: string): string {
       const address2 = this.form.value.address2;
       const country = this.form.value.country;
       const city = this.form.value.city;
+      const message = this.form.value.message;
       const howDidYouHear = this.form.value.howDidYouHear;
   
       var interestString = "";
@@ -127,6 +129,7 @@ if (selectedInterests.length > 2) {
   <p><strong>City:</strong> ${city}</p>
   <p><strong>How Did You Hear:</strong> ${howDidYouHear}</p>
   <p><strong>Interests:</strong> ${interestString}</p>
+  <p><strong>Message:</strong> ${message}</p>
 `;
       this._apiCallServices.contactLeadApi(hostEmail, subject, messageBody).subscribe(
         (res) => {
@@ -186,7 +189,10 @@ if (selectedInterests.length > 2) {
   arrErr.push("Country");
 }else if (this.form.value.city === "") {
   arrErr.push("City");
-}else if (this.form.value.howDidYouHear === "") {
+}else if (this.form.value.message === "") {
+  arrErr.push("Message");
+}
+else if (this.form.value.howDidYouHear === "") {
   arrErr.push("howDidYouHear");
 } else {
                 errMsg = "Unable to submit. Please re-enter the details manually, in the form. Avoid selecting from pre-filled options.";

@@ -37,6 +37,7 @@ export class ContactTheJewelClubComponent  implements OnInit {
       emailAddress: ['', [Validators.required, Validators.email]],
       phoneNumber: ['', Validators.required],
       country: ['', Validators.required],
+      message: ['', Validators.required],
       interestedIn: this.formBuilder.array([])
     });
   }
@@ -56,6 +57,7 @@ export class ContactTheJewelClubComponent  implements OnInit {
       var emailAddress = this.contactForm.value.emailAddress;
       var phoneNumber = this.contactForm.value.phoneNumber;
       var country = this.contactForm.value.country;
+      var message = this.contactForm.value.message;
       
       var subject = "You have a new Contact request from The Jewel Club Website";
       
@@ -66,6 +68,7 @@ export class ContactTheJewelClubComponent  implements OnInit {
       <p><strong>Email Address:</strong> ${emailAddress}</p>
       <p><strong>Phone Number:</strong> ${phoneNumber}</p>
       <p><strong>Country:</strong> ${country}</p>
+      <p><strong>Message:</strong> ${message}</p>
   `;
 
     
@@ -115,6 +118,8 @@ export class ContactTheJewelClubComponent  implements OnInit {
        arrErr.push("Phone Number");
      }else if(this.contactForm.value.country == ""){
       arrErr.push("Country");
+    }else if(this.contactForm.value.message == ""){
+      arrErr.push("Message");
     }
      else{
        errMsg = "Unable to submit. Please re-enter the details manually, in the form. Avoid selecting from pre filled options."
